@@ -1,9 +1,12 @@
 def add(a: int, b: int) -> int:
-    print(f"[debug] adding {a} and {b}") [cite: 223]
+    """Return the sum of two integers."""
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise TypeError("add expects integers")
+    print(f"[debug] adding {a} and {b}")
     return a + b
 
 def main() -> None:
-    print("add(2, 3) =", add(2, 3)) [cite: 225]
+    print("add(2, 3) =", add(2, 3))
 
 if __name__ == "__main__":
-    main() [cite: 226]
+    main()
